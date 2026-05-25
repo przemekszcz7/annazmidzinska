@@ -51,13 +51,13 @@ export default function GallerySection({ items }: GallerySectionProps) {
           <div className="h-px w-16 bg-amber-500/20 mx-auto mt-4"></div>
         </div>
 
-        {/* Dynamic Sophisticated Grid without visual text or category filters */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4" id="gallery-grid">
+        {/* Dynamic Sophisticated Grid without visual text or category filters, symmetrically distributed */}
+        <div className="flex flex-wrap justify-center gap-4" id="gallery-grid">
           {items.map((item) => (
             <div
               key={item.id}
               onClick={() => openLightbox(item.id)}
-              className="group relative cursor-pointer overflow-hidden aspect-square border border-zinc-950 bg-zinc-950 transition-all duration-700"
+              className="group relative cursor-pointer overflow-hidden aspect-square border border-zinc-950 bg-zinc-950 transition-all duration-700 w-[calc(50%-8px)] md:w-[calc(33.333%-11px)] lg:w-[calc(25%-12px)]"
             >
               <img
                 src={item.url}
