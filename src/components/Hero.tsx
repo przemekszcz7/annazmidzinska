@@ -24,7 +24,7 @@ export default function Hero({ onCalculateClick }: HeroProps) {
 
       {/* Symmetrical fine jewelry golden lines/markers for extreme elegance */}
       <div className="absolute inset-y-12 inset-x-6 sm:inset-x-12 border border-amber-500/10 pointer-events-none flex flex-col justify-between p-6">
-        <div className="flex justify-end text-[7px] font-mono tracking-[0.5em] text-amber-500/40 uppercase">
+        <div className="flex justify-end text-[7px] font-serif tracking-[0.5em] text-amber-500/40 uppercase">
           <span>[ WYSZANÓW, PL ]</span>
         </div>
       </div>

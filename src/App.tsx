@@ -68,7 +68,7 @@ export default function App() {
                   <h4 className="font-serif text-lg font-bold tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-400 to-amber-200">
                     ANNA ŻMIDZIŃSKA
                   </h4>
-                  <p className="text-[10px] uppercase font-mono tracking-wider text-amber-500/80">
+                  <p className="text-[10px] uppercase font-serif tracking-wider text-amber-500/80">
                     Catering Okolicznościowy
                   </p>
                 </div>
@@ -80,7 +80,7 @@ export default function App() {
 
             {/* Event Links Column */}
             <div className="space-y-4 col-span-1">
-              <h5 className="text-[11px] uppercase font-mono tracking-[0.2em] text-amber-500 font-bold">Nasze Usługi</h5>
+              <h5 className="text-[11px] uppercase font-serif tracking-[0.2em] text-amber-500 font-bold">Nasze Usługi</h5>
               <ul className="space-y-2 text-xs text-gray-400">
                 <li>
                   <a href="#oferta" className="hover:text-amber-400 transition-colors">Pierwsza Komunia</a>
@@ -102,7 +102,7 @@ export default function App() {
 
             {/* Direct Quick Action Contact */}
             <div className="space-y-4 col-span-1">
-              <h5 className="text-[11px] uppercase font-mono tracking-[0.2em] text-amber-500 font-bold">Szybki Kontakt</h5>
+              <h5 className="text-[11px] uppercase font-serif tracking-[0.2em] text-amber-500 font-bold">Szybki Kontakt</h5>
               <ul className="space-y-2 text-xs text-gray-400">
                 <li className="flex items-center gap-2">
                   <MapPin size={12} className="text-amber-500" />
@@ -137,7 +137,7 @@ export default function App() {
                 <span>Facebook Profil</span>
               </a>
               <span>•</span>
-              <span className="font-mono">Wyszanów, Polska</span>
+              <span className="font-serif">Wyszanów, Polska</span>
             </div>
           </div>
 

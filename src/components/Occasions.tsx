@@ -31,7 +31,7 @@ export default function Occasions({ occasions, onSelectOccasion }: OccasionsProp
         {/* Waiter Service Elegant Highlight */}
         <div className="mb-24 text-center border-t border-b border-amber-500/15 py-10 px-8 relative">
           <div className="max-w-xl mx-auto space-y-3">
-            <span className="text-[9px] uppercase tracking-[0.4em] text-amber-400 font-mono font-medium block">
+            <span className="text-[9px] uppercase tracking-[0.4em] text-amber-400 font-serif font-medium block">
               Serwis Kelnerski
             </span>
             <h3 className="font-serif text-lg text-white tracking-widest uppercase">
@@ -66,7 +66,7 @@ export default function Occasions({ occasions, onSelectOccasion }: OccasionsProp
                   </div>
                   
                   <div className="flex items-center space-x-4">
-                    <span className="hidden sm:inline font-mono text-[10px] text-zinc-500 uppercase tracking-widest">
+                    <span className="hidden sm:inline font-serif text-[10px] text-zinc-500 uppercase tracking-widest">
                       od {occasion.basePricePerGuest} zł / os.
                     </span>
                     <span className={`text-amber-500/60 transform transition-transform duration-300 ${isExpanded ? "rotate-180" : ""}`}>
@@ -94,7 +94,7 @@ export default function Occasions({ occasions, onSelectOccasion }: OccasionsProp
 
                     <div className="flex my-6 items-center justify-between pt-4 border-t border-zinc-900">
                       <div>
-                        <span className="text-[9px] font-mono uppercase tracking-widest text-zinc-500 block">Sugerowany pakiet</span>
+                        <span className="text-[9px] font-serif uppercase tracking-widest text-zinc-500 block">Sugerowany pakiet</span>
                         <span className="text-xs font-serif text-amber-400 font-medium tracking-widest block mt-1">od {occasion.basePricePerGuest} PLN / osoba</span>
                       </div>
                       

@@ -31,7 +31,7 @@ export default function ContactSection() {
           <div className="space-y-12 text-center">
             
             <div className="space-y-4 max-w-xl mx-auto">
-              <span className="text-[10px] uppercase tracking-[0.3em] text-amber-500/60 font-mono block">
+              <span className="text-[10px] uppercase tracking-[0.3em] text-amber-500/60 font-serif block">
                 Biuro rezerwacji
               </span>
               <p className="text-zinc-400 text-xs sm:text-sm font-serif font-light leading-relaxed">
@@ -43,12 +43,12 @@ export default function ContactSection() {
               
               {/* 1. Address box */}
               <div className="space-y-2.5">
-                <span className="text-[8px] font-mono tracking-widest text-zinc-600 uppercase block">Kuchnia Rzemieślnicza</span>
+                <span className="text-[8px] font-serif tracking-widest text-zinc-600 uppercase block">Kuchnia Rzemieślnicza</span>
                 <p className="text-white text-sm font-serif tracking-[0.05em]">Wyszanów 98-400</p>
                 <p className="text-zinc-500 text-[10px] font-serif font-light leading-normal">Województwo łódzkie</p>
                 <button
                   onClick={() => handleCopy("Wyszanów 98-400", "Adres")}
-                  className="text-[9px] font-mono tracking-wider text-amber-500/80 hover:text-amber-400 transition-colors block mx-auto pt-1"
+                  className="text-[8px] font-sans tracking-widest text-amber-500/80 hover:text-amber-400 transition-colors block mx-auto pt-1 uppercase"
                 >
                   {copiedText === "Adres" ? "Skopiowano!" : "[ Skopiuj Adres ]"}
                 </button>
@@ -56,7 +56,7 @@ export default function ContactSection() {
 
               {/* 2. Phone box */}
               <div className="space-y-2.5 border-t md:border-t-0 md:border-x border-zinc-900 pt-8 md:pt-0 px-4">
-                <span className="text-[8px] font-mono tracking-widest text-zinc-600 uppercase block">Telefon alarmowy</span>
+                <span className="text-[8px] font-serif tracking-widest text-zinc-600 uppercase block">Telefon alarmowy</span>
                 <a
                   href="tel:888783004"
                   className="text-amber-400 hover:text-amber-300 font-serif text-lg tracking-widest block transition-colors mt-0.5"
@@ -65,7 +65,7 @@ export default function ContactSection() {
                 </a>
                 <button
                   onClick={() => handleCopy("888783004", "Telefon")}
-                  className="text-[9px] font-mono tracking-wider text-amber-500/80 hover:text-amber-400 transition-colors block mx-auto pt-1"
+                  className="text-[8px] font-sans tracking-widest text-amber-500/80 hover:text-amber-400 transition-colors block mx-auto pt-1 uppercase"
                 >
                   {copiedText === "Telefon" ? "Skopiowano!" : "[ Skopiuj Telefon ]"}
                 </button>
@@ -73,16 +73,16 @@ export default function ContactSection() {
 
               {/* 3. Email box */}
               <div className="space-y-2.5 border-t md:border-t-0 border-zinc-900 pt-8 md:pt-0">
-                <span className="text-[8px] font-mono tracking-widest text-zinc-600 uppercase block">Poczta elektroniczna</span>
+                <span className="text-[8px] font-serif tracking-widest text-zinc-600 uppercase block">Poczta elektroniczna</span>
                 <a
                   href="mailto:anna.zmidzinska@wp.pl"
-                  className="text-zinc-200 hover:text-amber-400 text-xs tracking-wider block font-mono transition-colors mt-1"
+                  className="text-zinc-200 hover:text-amber-400 text-xs tracking-wider block font-sans font-light transition-colors mt-1"
                 >
                   anna.zmidzinska@wp.pl
                 </a>
                 <button
                   onClick={() => handleCopy("anna.zmidzinska@wp.pl", "Mail")}
-                  className="text-[9px] font-mono tracking-wider text-amber-500/80 hover:text-amber-400 transition-colors block mx-auto pt-1"
+                  className="text-[8px] font-sans tracking-widest text-amber-500/80 hover:text-amber-400 transition-colors block mx-auto pt-1 uppercase"
                 >
                   {copiedText === "Mail" ? "Skopiowano!" : "[ Skopiuj E-mail ]"}
                 </button>
@@ -92,7 +92,7 @@ export default function ContactSection() {
 
             {/* Logistics info */}
             <div className="pt-12 border-t border-zinc-900/60 max-w-md mx-auto space-y-2">
-              <span className="text-[8px] uppercase tracking-[0.25em] text-amber-500/50 font-mono block">
+              <span className="text-[8px] uppercase tracking-[0.25em] text-amber-500/50 font-serif block">
                 Zasięg logistyczny
               </span>
               <p className="text-xs text-zinc-500 font-serif font-light leading-relaxed">

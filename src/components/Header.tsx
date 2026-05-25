@@ -21,6 +21,18 @@ export default function Header({ logoUrl }: HeaderProps) {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Prevent background scrolling when mobile menu is open to prevent visual glitches
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isMobileMenuOpen]);
+
   const navLinks = [
     { name: "Kolekcje Menu", href: "#kolekcje" },
     { name: "Galeria", href: "#galeria" },
@@ -57,6 +69,7 @@ export default function Header({ logoUrl }: HeaderProps) {
           <a
             href="#hero"
             id="brand-logo-link"
+            onClick={() => setIsMobileMenuOpen(false)}
             className="flex flex-col items-center justify-center text-center group"
           >
             <span className="font-serif text-xs sm:text-base tracking-[0.4em] text-white font-extrabold whitespace-nowrap transition-colors group-hover:text-amber-200 uppercase">
@@ -95,9 +108,9 @@ export default function Header({ logoUrl }: HeaderProps) {
           <div className="flex lg:hidden items-center space-x-4">
             <a
               href="tel:888783004"
-              className="text-xs font-mono text-amber-400/90 hover:text-amber-300 border border-amber-500/20 px-2.5 py-1 text-[9px] uppercase tracking-widest rounded-sm"
+              className="text-xs font-sans text-amber-400/90 hover:text-amber-300 border border-amber-500/20 px-2.5 py-1 text-[9px] uppercase tracking-widest rounded-sm whitespace-nowrap"
             >
-              📞 888 783 004
+              888 783 004
             </a>
             
             <button
@@ -121,8 +134,9 @@ export default function Header({ logoUrl }: HeaderProps) {
           isMobileMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-full pointer-events-none"
         }`}
         id="mobile-menu"
+        onClick={() => setIsMobileMenuOpen(false)}
       >
-        <div className="flex flex-col justify-center items-center h-full space-y-9 px-6 pt-16">
+        <div className="flex flex-col items-center justify-start min-h-screen overflow-y-auto py-24 space-y-8 px-6">
           {navLinks.map((link) => (
             <a
               key={link.name}
@@ -134,10 +148,11 @@ export default function Header({ logoUrl }: HeaderProps) {
             </a>
           ))}
 
-          <div className="pt-8 border-t border-zinc-900 w-full max-w-xs text-center space-y-4">
+          <div className="pt-8 border-t border-zinc-900 w-full max-w-xs text-center space-y-4" onClick={(e) => e.stopPropagation()}>
             <a
               href="mailto:anna.zmidzinska@wp.pl"
-              className="text-zinc-500 hover:text-amber-400 transition-colors text-xs font-mono tracking-widest"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="text-zinc-500 hover:text-amber-400 transition-colors text-xs font-sans tracking-widest block"
             >
               anna.zmidzinska@wp.pl
             </a>
@@ -147,7 +162,8 @@ export default function Header({ logoUrl }: HeaderProps) {
                 href="https://www.facebook.com/anna.zmidzinskawyszanow/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-amber-500 hover:text-amber-400 transition-colors flex items-center gap-1.5 text-xs font-mono uppercase tracking-widest"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="text-amber-500 hover:text-amber-400 transition-colors flex items-center gap-1.5 text-xs font-sans uppercase tracking-widest"
               >
                 <Facebook size={14} />
                 <span>Facebook</span>
@@ -155,6 +171,7 @@ export default function Header({ logoUrl }: HeaderProps) {
               <span className="text-zinc-800">/</span>
               <a
                 href="tel:888783004"
+                onClick={() => setIsMobileMenuOpen(false)}
                 className="text-amber-500 hover:text-amber-400 font-serif font-bold text-sm tracking-wider"
               >
                 888 783 004

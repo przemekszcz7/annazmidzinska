@@ -53,7 +53,7 @@ export default function Testimonials({ reviews }: TestimonialsProps) {
                   <h5 className="font-serif text-[10px] tracking-widest text-amber-400/90 uppercase">
                     {rev.author}
                   </h5>
-                  <span className="text-[8px] font-mono tracking-widest text-zinc-600 uppercase block mt-1">RECENZJA ZWERYFIKOWANA</span>
+                  <span className="text-[8px] font-serif tracking-widest text-zinc-600 uppercase block mt-1">RECENZJA ZWERYFIKOWANA</span>
                 </div>
               </div>
             </div>
@@ -63,7 +63,7 @@ export default function Testimonials({ reviews }: TestimonialsProps) {
         {/* Facebook Link Banner */}
         <div className="max-w-2xl mx-auto p-12 border border-amber-500/10 text-center space-y-8 bg-zinc-950/20">
           <div className="space-y-3">
-            <span className="text-[9px] uppercase tracking-[0.3em] text-amber-500/70 font-mono block">Media społecznościowe</span>
+            <span className="text-[9px] uppercase tracking-[0.3em] text-amber-500/70 font-serif block">Media społecznościowe</span>
             <h3 className="font-serif text-lg text-white tracking-[0.15em] uppercase">
               Rekomendacje na żywo
             </h3>
