@@ -33,8 +33,8 @@ export default function Header({ logoUrl }: HeaderProps) {
       id="header-navigation"
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? "bg-black/95 border-b border-amber-500/10 py-4 backdrop-blur-md"
-          : "bg-transparent py-7"
+          ? "bg-black/95 border-b border-amber-500/10 py-3 md:py-4 backdrop-blur-md"
+          : "bg-transparent py-4 md:py-7"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-8">
@@ -59,10 +59,10 @@ export default function Header({ logoUrl }: HeaderProps) {
             id="brand-logo-link"
             className="flex flex-col items-center justify-center text-center group"
           >
-            <span className="font-serif text-sm sm:text-base tracking-[0.4em] text-white font-extrabold max-w-[280px] break-keep transition-colors group-hover:text-amber-200 uppercase">
+            <span className="font-serif text-xs sm:text-base tracking-[0.4em] text-white font-extrabold whitespace-nowrap transition-colors group-hover:text-amber-200 uppercase">
               ANNA ŻMIDZIŃSKA
             </span>
-            <span className="text-[7.5px] uppercase tracking-[0.45em] text-amber-500/70 font-sans font-light mt-1.5 transition-colors group-hover:text-amber-400">
+            <span className="text-[6.5px] sm:text-[7.5px] uppercase tracking-[0.45em] text-amber-500/70 font-sans font-light mt-1 sm:mt-1.5 whitespace-nowrap transition-colors group-hover:text-amber-400">
               catering okolicznościowy
             </span>
           </a>
