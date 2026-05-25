@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cinzel", Georgia, serif;
+  --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Custom golden gradient and luxurious elements */
+@layer utilities {
+  .text-gold {
+    background: linear-gradient(135deg, #f3e7c4 0%, #d4af37 50%, #aa7c11 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .bg-gold-gradient {
+    background: linear-gradient(135deg, #f6f0dd 0%, #d4af37 50%, #aa7c11 100%);
+  }
+
+  .border-gold {
+    border-image: linear-gradient(135deg, #f3e7c4, #d4af37, #aa7c11) 1;
+  }
+  
+  .shadow-gold-sm {
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.1);
+  }
+
+  .shadow-gold-lg {
+    box-shadow: 0 0 30px rgba(212, 175, 55, 0.2);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #0d0d0d;
+}
